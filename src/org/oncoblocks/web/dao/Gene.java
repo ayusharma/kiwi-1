@@ -2,28 +2,17 @@ package org.oncoblocks.web.dao;
 
 public class Gene {
 	private int id;
-	private String name;
-	private String email;
-	private String text;
+	private String geneid;
+	private String summary;
 	
 	public Gene() {
 		
 	}
 
-	public Gene(String name, String email, String text) {
-		this.name = name;
-		this.email = email;
-		this.text = text;
-	}
-	
-	
-
-	public Gene(int id, String name, String email, String text) {
-		super();
+	public Gene(int id, String geneid, String summary) {
 		this.id = id;
-		this.name = name;
-		this.email = email;
-		this.text = text;
+		this.geneid = geneid;
+		this.summary = summary;
 	}
 
 	public int getId() {
@@ -34,34 +23,25 @@ public class Gene {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getGeneid() {
+		return geneid;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setGeneid(String geneid) {
+		this.geneid = geneid;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getSummary() {
+		return summary;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getText() {
-		return text;
-	}
-
-	public void setText(String text) {
-		this.text = text;
+	public void setSummary(String summary) {
+		this.summary = summary;
 	}
 
 	@Override
 	public String toString() {
-		return "Offer [id=" + id + ", name=" + name + ", email=" + email
-				+ ", text=" + text + "]";
+		return "Gene [id=" + id + ", geneid=" + geneid + ", summary=" + summary
+				+ "]";
 	}
-
 }
