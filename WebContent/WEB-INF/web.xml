@@ -20,4 +20,23 @@
     <servlet-name>kiwi</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  
+  <description>MySQL Test App</description>
+  <resource-ref>
+      <description>DB Connection</description>
+      <res-ref-name>jdbc/spring	</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+  </resource-ref>
+  
+  <!--  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener.class</listener-class>
+  </listener>
+  
+ <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>
+  		classpath:org/oncoblocks/web/config/dao-context.xml
+  	</param-value>
+  </context-param>  -->
 </web-app>
