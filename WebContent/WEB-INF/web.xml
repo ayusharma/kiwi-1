@@ -29,8 +29,8 @@
       <res-auth>Container</res-auth>
   </resource-ref>
   
-  <!--  <listener>
-  	<listener-class>org.springframework.web.context.ContextLoaderListener.class</listener-class>
+   <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
   
  <context-param>
@@ -38,5 +38,5 @@
   	<param-value>
   		classpath:org/oncoblocks/web/config/dao-context.xml
   	</param-value>
-  </context-param>  -->
+  </context-param>  
 </web-app>

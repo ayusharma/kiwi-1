@@ -17,12 +17,13 @@
 	
 	
 	<sql:query var="rs" dataSource="jdbc/spring">
-		select id, name, email, text from offers
+		select id, ENTREZ_GENE_ID, SUMMARY from GENE_ANNOTATION
 	</sql:query>
 	
 	<c:forEach var="row" items="${rs.rows}">
     ID: ${row.id}<br/>
-    NAME: ${row.name}<br/>
+    Gene ID: ${row.ENTREZ_GENE_ID}<br/>
+    Summary: ${row.SUMMARY}
 </c:forEach>
 </body>
 </html>
