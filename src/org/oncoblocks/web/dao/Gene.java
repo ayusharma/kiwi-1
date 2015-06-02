@@ -1,16 +1,16 @@
 package org.oncoblocks.web.dao;
 
-public class Offer {
+public class Gene {
 	private int id;
 	private String name;
 	private String email;
 	private String text;
 	
-	public Offer() {
+	public Gene() {
 		
 	}
 
-	public Offer(String name, String email, String text) {
+	public Gene(String name, String email, String text) {
 		this.name = name;
 		this.email = email;
 		this.text = text;
@@ -18,7 +18,7 @@ public class Offer {
 	
 	
 
-	public Offer(int id, String name, String email, String text) {
+	public Gene(int id, String name, String email, String text) {
 		super();
 		this.id = id;
 		this.name = name;

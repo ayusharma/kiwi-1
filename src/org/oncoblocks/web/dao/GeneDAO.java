@@ -16,26 +16,22 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSourceUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-@Component("offersDao")
-public class OffersDAO {
+@Component("geneDao")
+public class GeneDAO {
 
 	private NamedParameterJdbcTemplate jdbc;
-	
-	public OffersDAO(){
-		System.out.println("Sucessfully Loadded");
-	}
 
 	@Autowired
 	public void setDataSource(DataSource jdbc) {
 		this.jdbc = new NamedParameterJdbcTemplate(jdbc);
 	}
 
-	public List<Offer> getOffers() {
+	public List<Gene> getOffers() {
 
-		return jdbc.query("select * from offers", new RowMapper<Offer>() {
+		return jdbc.query("select * from offers", new RowMapper<Gene>() {
 
-			public Offer mapRow(ResultSet rs, int rowNum) throws SQLException {
-				Offer offer = new Offer();
+			public Gene mapRow(ResultSet rs, int rowNum) throws SQLException {
+				Gene offer = new Gene();
 
 				offer.setId(rs.getInt("id"));
 				offer.setName(rs.getString("name"));
@@ -48,13 +44,13 @@ public class OffersDAO {
 		});
 	}
 	
-	public boolean update(Offer offer) {
+	public boolean update(Gene offer) {
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(offer);
 		
 		return jdbc.update("update offers set name=:name, text=:text, email=:email where id=:id", params) == 1;
 	}
 	
-	public boolean create(Offer offer) {
+	public boolean create(Gene offer) {
 		
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(offer);
 		
@@ -62,7 +58,7 @@ public class OffersDAO {
 	}
 	
 	@Transactional
-	public int[] create(List<Offer> offers) {
+	public int[] create(List<Gene> offers) {
 		
 		SqlParameterSource[] params = SqlParameterSourceUtils.createBatch(offers.toArray());
 		
@@ -75,24 +71,24 @@ public class OffersDAO {
 		return jdbc.update("delete from offers where id=:id", params) == 1;
 	}
 
-	public Offer getOffer(int id) {
+	public Gene getOffer(int id) {
 
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("id", id);
 
 		return jdbc.queryForObject("select * from offers where id=:id", params,
-				new RowMapper<Offer>() {
+				new RowMapper<Gene>() {
 
-					public Offer mapRow(ResultSet rs, int rowNum)
+					public Gene mapRow(ResultSet rs, int rowNum)
 							throws SQLException {
-						Offer offer = new Offer();
+						Gene gene = new Gene();
 
-						offer.setId(rs.getInt("id"));
-						offer.setName(rs.getString("name"));
-						offer.setText(rs.getString("text"));
-						offer.setEmail(rs.getString("email"));
+						gene.setId(rs.getInt("id"));
+						gene.setName(rs.getString("name"));
+						gene.setText(rs.getString("text"));
+						gene.setEmail(rs.getString("email"));
 
-						return offer;
+						return gene;
 					}
 
 				});
