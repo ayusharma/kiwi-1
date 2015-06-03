@@ -29,6 +29,7 @@ public class GeneController {
 	public String enterGeneInfo(Model model, Gene gene){
 		System.out.println(gene);
 		primaryService.create(gene);
+		primaryService.getGeneInfoUsingRest();
 		return "geneinfo";
 	}
 	
