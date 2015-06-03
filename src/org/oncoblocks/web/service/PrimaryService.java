@@ -10,7 +10,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class PrimaryService {
 	
-	private GeneDAO geneDao; 			
+	private GeneDAO geneDao; 	
+
 	
 	@Autowired
 	public void setGeneDao(GeneDAO geneDao) {
@@ -18,8 +19,12 @@ public class PrimaryService {
 	}
 
 
-
 	public List<Gene> getGeneInfo(){
 		return geneDao.getGene();
 	}
+	
+	public void create(Gene gene) {
+		geneDao.create(gene);
+	}
+
 }

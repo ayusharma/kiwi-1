@@ -8,7 +8,8 @@
 </head>
 <body>
 	<form method="post" action="${pageContext.request.contextPath}/entergeneinfo">
-		<input name="geneid" type="text">
+		<input name="entrez_gene_id" type="text">
+		<input name="summary" type="text">
 		<input value="Enter GeneID" type="submit">
 	</form>
 </body>

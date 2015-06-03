@@ -10,14 +10,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class GeneController {
+
+	private PrimaryService primaryService;
 	
-//	private PrimaryService primaryService;
-//	
-//	
-//	@Autowired
-//	public void setPrimaryService(PrimaryService primaryService) {
-//		this.primaryService = primaryService;
-//	}
+	
+	@Autowired
+	public void setPrimaryService(PrimaryService primaryService) {
+		this.primaryService = primaryService;
+	}
+
 
 	@RequestMapping("/geneform")
 	public String showGeneForm(){
@@ -27,11 +28,15 @@ public class GeneController {
 	@RequestMapping(value="/entergeneinfo", method=RequestMethod.POST)
 	public String enterGeneInfo(Model model, Gene gene){
 		System.out.println(gene);
+		primaryService.create(gene);
 		return "geneinfo";
 	}
 	
 //	@RequestMapping("/getgeneinfo")
-//	public String getGeneInfo(){
-//		return "geneinfo";
+//	public String getGeneInfo(Model model){
+//		
+//		String p = ps.getRestView();
+//		System.out.println(p);
+//		return "newgeneinfo";
 //	}
 }
