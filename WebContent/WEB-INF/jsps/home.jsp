@@ -11,16 +11,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Hello World  ${ name }
-	<br>
-	<c:out value="${name}"></c:out>
 	
-	
-	<sql:query var="rs" dataSource="jdbc/spring">
-		select id, entrez_gene_id, summary from GENE_ANNOTATION
-	</sql:query>
-	
-	<c:forEach var="row" items="${rs.rows}">
+	<c:forEach var="row" items="${genes}">
     ID: ${row.id}<br/>
     Gene ID: ${row.entrez_gene_id}<br/>
     Summary: ${row.summary}

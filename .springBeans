@@ -9,6 +9,7 @@
 	<configs>
 		<config>WebContent/WEB-INF/kiwi-servlet.xml</config>
 		<config>src/org/oncoblocks/web/config/dao-context.xml</config>
+		<config>src/org/oncoblocks/web/config/service-context.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
