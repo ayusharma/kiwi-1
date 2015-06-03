@@ -2,16 +2,16 @@ package org.oncoblocks.web.dao;
 
 public class Gene {
 	private int id;
-	private String geneid;
+	private String entrez_gene_id;
 	private String summary;
 	
 	public Gene() {
 		
 	}
 
-	public Gene(int id, String geneid, String summary) {
+	public Gene(int id, String entrez_gene_id, String summary) {
 		this.id = id;
-		this.geneid = geneid;
+		this.entrez_gene_id = entrez_gene_id;
 		this.summary = summary;
 	}
 
@@ -23,12 +23,12 @@ public class Gene {
 		this.id = id;
 	}
 
-	public String getGeneid() {
-		return geneid;
+	public String getEntrez_gene_id() {
+		return entrez_gene_id;
 	}
 
-	public void setGeneid(String geneid) {
-		this.geneid = geneid;
+	public void setEntrez_gene_id(String entrez_gene_id) {
+		this.entrez_gene_id = entrez_gene_id;
 	}
 
 	public String getSummary() {
@@ -41,7 +41,11 @@ public class Gene {
 
 	@Override
 	public String toString() {
-		return "Gene [id=" + id + ", geneid=" + geneid + ", summary=" + summary
-				+ "]";
+		return "Gene [id=" + id + ", entrez_gene_id=" + entrez_gene_id
+				+ ", summary=" + summary + "]";
 	}
+	
+	
+	
+
 }
