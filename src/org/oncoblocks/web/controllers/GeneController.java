@@ -28,9 +28,9 @@ public class GeneController {
 	
 	@RequestMapping(value="/entergeneinfo", method=RequestMethod.POST)
 	public String enterGeneInfo(Model model, Gene gene){
-		System.out.println(gene);
+		System.out.println(gene.getEntrez_gene_id());
 		primaryService.create(gene);
-		primaryService.getGeneInfoUsingRest();
+		primaryService.getGeneInfoUsingRest(gene.getEntrez_gene_id());
 		return "geneinfo";
 	}
 	
