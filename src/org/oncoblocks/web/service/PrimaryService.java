@@ -45,11 +45,11 @@ public class PrimaryService {
 //		HttpHeaders headers = new HttpHeaders();
 //		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 //		HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
-        RestApiGet page = restTemplate.getForObject("http://graph.facebook.com/pivotalsoftware", RestApiGet.class);
-        System.out.println("Name:    " + page.getName());
-        System.out.println("About:   " + page.getAbout());
-        System.out.println("Phone:   " + page.getPhone());
-        System.out.println("Website: " + page.getWebsite());
+        RestApiGet page = restTemplate.getForObject("http://mygene.info/v2/gene/672", RestApiGet.class);
+        System.out.println("Name:    " + page.getSummary());
+//        System.out.println("About:   " + page.getPir());
+//        System.out.println("Phone:   " + page.getPhone());
+//        System.out.println("Website: " + page.getWebsite());
 	}
 
 }
