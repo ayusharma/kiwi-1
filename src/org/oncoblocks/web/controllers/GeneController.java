@@ -14,6 +14,7 @@ public class GeneController {
 	private PrimaryService primaryService;
 	
 	
+
 	@Autowired
 	public void setPrimaryService(PrimaryService primaryService) {
 		this.primaryService = primaryService;
