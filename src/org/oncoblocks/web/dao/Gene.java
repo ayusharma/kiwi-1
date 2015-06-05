@@ -9,8 +9,7 @@ public class Gene {
 		
 	}
 
-	public Gene(int id, String entrez_gene_id, String summary) {
-		this.id = id;
+	public Gene(String entrez_gene_id, String summary) {
 		this.entrez_gene_id = entrez_gene_id;
 		this.summary = summary;
 	}
