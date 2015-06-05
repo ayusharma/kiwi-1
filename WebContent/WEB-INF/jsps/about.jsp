@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -16,9 +12,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/static/css/custom.css" />
 </head>
-<body
-	style="background: url('${pageContext.request.contextPath}/static/images/kiwi.jpg') no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;
-">
+<body>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
@@ -44,22 +38,19 @@
 				<!-- /.container-fluid --> </nav>
 			</div>
 		</div>
-		<div class="row" style="margin-top: 150px;">
-			<div class="col-md-12">
-				<div class="jumbotron text-center">
-					<h1>
-						<b>KIWI</b>
-					</h1>
-					<p>
-						<b>A simple open source, web based tool for annotating
-							mutations in cancer. </b>
-					</p>
-					<p>
-						<a class="btn btn-success btn-lg"
-							href="${pageContext.request.contextPath}/geneform" role="button">Use
-							Tool</a> <a class="btn btn-success btn-lg" href="${pageContext.request.contextPath}/about" role="button">About
-							Project</a>
-					</p>
+		<div class="row" style="margin-top: 75px;">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<b>About Project</b>
+						</h3>
+					</div>
+					<div class="panel-body">
+
+						To Be Updated
+
+					</div>
 				</div>
 			</div>
 		</div>

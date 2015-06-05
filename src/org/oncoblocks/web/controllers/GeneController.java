@@ -49,6 +49,8 @@ public class GeneController {
 		
 //		gene.setEntrez_gene_id();
 //		sSystem.out.println(id);
+		model.addAttribute("summary",temp);
+		model.addAttribute("id",entrez_gene_id);
 		return "geneinfo";
 	}
 	

@@ -26,4 +26,10 @@ public class PrimaryController {
 		
 		 return "home";
 	}
+	@RequestMapping("/about")
+	public String showAbout(Model model){
+		
+		
+		 return "about";
+	}
 }

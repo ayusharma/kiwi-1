@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -20,13 +22,6 @@
 				<div class="container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed"
-							data-toggle="collapse"
-							data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span> <span
-								class="icon-bar"></span> <span class="icon-bar"></span> <span
-								class="icon-bar"></span>
-						</button>
 						<a class="navbar-brand" href="${pageContext.request.contextPath}"><b>KIWI</b></a>
 					</div>
 
@@ -39,6 +34,7 @@
 									class="fa fa-github fa-3x"></i> </a></li>
 							<li><a href="${pageContext.request.contextPath}"><i
 									class="fa fa-home fa-3x"></i> </a></li>
+							<li><a href="${pageContext.request.contextPath}/geneindb"><i class="fa fa-database fa-3x"></i> </a></li>
 						</ul>
 					</div>
 
@@ -51,21 +47,14 @@
 				<div class="panel panel-success">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							<b>You have submitted</b>
+						
+							Summary for Gene:&nbsp;<b><c:out value="${id}"></c:out></b>
 						</h3>
 					</div>
 					<div class="panel-body">
-
+						<c:out value="${summary}"></c:out>
 					</div>
 				</div>
-				<!-- 
-				<form method="post"
-					action="${pageContext.request.contextPath}/entergeneinfo">
-					<input name="entrez_gene_id" type="text"> <input
-						name="summary" type="text"> <input value="Enter GeneID"
-						type="submit">
-				</form>
-				 -->
 			</div>
 			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-success">
