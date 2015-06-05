@@ -1,5 +1,7 @@
 package org.oncoblocks.web.controllers;
 
+import java.util.List;
+
 import org.oncoblocks.web.dao.Gene;
 import org.oncoblocks.web.service.PrimaryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,13 @@ public class GeneController {
 	@RequestMapping("/geneform")
 	public String showGeneForm(){
 		return "geneform";
+	}
+	
+	@RequestMapping("/geneindb")
+	public String showGeneInDb(Model model){
+		List<Gene> gene = primaryService.getGeneInfo();
+		model.addAttribute("genes",gene);
+		return "geneindb";
 	}
 	
 	@RequestMapping(value="/entergeneinfo", method=RequestMethod.POST)

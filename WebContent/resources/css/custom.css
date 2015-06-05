@@ -1,1 +1,26 @@
  @CHARSET "UTF-8";
+ 
+ body {
+ 	background-color:#81A649;
+ }
+ .jumbotron {
+ 	background-color:transparent !important;
+ 	color:#FFF !important;
+ }
+ .footer {
+ 	width:100%;
+ 	text-align:center;
+ 	position:fixed;
+ 	bottom:10px;
+ 	color:#fff;
+ }
+ nav a {
+ 	color:#FFF !important;
+ }
+.nav > li > a:focus, .nav > li > a:hover {
+	background-color:transparent;
+}
+ 
+ nav a:hover {
+ 	color:#333 !important;
+ }

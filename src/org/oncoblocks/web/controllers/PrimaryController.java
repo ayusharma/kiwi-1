@@ -23,8 +23,7 @@ public class PrimaryController {
 	@RequestMapping("/")
 	public String showHome(Model model){
 		
-		List<Gene> gene = primaryService.getGeneInfo();
-		model.addAttribute("genes",gene);
+		
 		 return "home";
 	}
 }
