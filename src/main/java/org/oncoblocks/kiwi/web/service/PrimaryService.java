@@ -1,17 +1,12 @@
-package org.oncoblocks.web.service;
+package main.java.org.oncoblocks.kiwi.web.service;
 
-import java.util.Arrays;
 import java.util.List;
 
-import org.apache.tomcat.util.http.parser.MediaType;
-import org.oncoblocks.web.dao.GeneDAO;
-import org.oncoblocks.web.dao.Gene;
-import org.oncoblocks.web.dao.RestApiGet;
+import main.java.org.oncoblocks.kiwi.web.dao.Gene;
+import main.java.org.oncoblocks.kiwi.web.dao.GeneDAO;
+import main.java.org.oncoblocks.kiwi.web.dao.RestApiGet;
 //import org.oncoblocks.web.dao.RestApiGet;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

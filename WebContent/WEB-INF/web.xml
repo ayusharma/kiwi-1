@@ -36,8 +36,8 @@
  <context-param>
   	<param-name>contextConfigLocation</param-name>
   	<param-value>
-  		classpath:org/oncoblocks/web/config/dao-context.xml
-  		classpath:org/oncoblocks/web/config/service-context.xml
+  		classpath:main/java/org/oncoblocks/kiwi/web/config/dao-context.xml
+  		classpath:main/java/org/oncoblocks/kiwi/web/config/service-context.xml
   	</param-value>
   </context-param>  
 </web-app>

@@ -1,9 +1,8 @@
-package org.oncoblocks.web.controllers;
+package main.java.org.oncoblocks.kiwi.web.controllers;
 
 import java.util.List;
-
-import org.oncoblocks.web.dao.Gene;
-import org.oncoblocks.web.service.PrimaryService;
+import main.java.org.oncoblocks.kiwi.web.dao.Gene;
+import main.java.org.oncoblocks.kiwi.web.service.PrimaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,4 +1,4 @@
-package org.oncoblocks.web.dao;
+package main.java.org.oncoblocks.kiwi.web.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

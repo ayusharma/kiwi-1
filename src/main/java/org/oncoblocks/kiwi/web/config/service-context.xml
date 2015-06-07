@@ -7,5 +7,5 @@
 
 
 	<context:annotation-config></context:annotation-config>
-	<context:component-scan base-package="org.oncoblocks.web.service"></context:component-scan>
+	<context:component-scan base-package="main.java.org.oncoblocks.kiwi.web.service"></context:component-scan>
 </beans>
